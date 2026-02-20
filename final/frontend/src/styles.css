@@ -1,0 +1,65 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ------------------------------------
+   GLOBAL TYPOGRAPHY
+------------------------------------- */
+body {
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system,
+    Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+  background-color: #F6F7F8;
+  color: #101828;
+  line-height: 1.5;
+}
+
+/* ------------------------------------
+   CARD SYSTEM
+------------------------------------- */
+.card {
+  @apply bg-white border border-[#E7EAEE] rounded-[16px]
+         shadow-[0_10px_30px_rgba(16,24,40,0.08)]
+         transition-all duration-200 ease-out;
+}
+
+.card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 14px 40px rgba(16, 24, 40, 0.12);
+}
+
+/* ------------------------------------
+   BUTTON SYSTEM
+------------------------------------- */
+.btn-primary {
+  @apply bg-[#0E6B46] text-white rounded-full px-4 py-2
+         transition-all duration-200 ease-out;
+}
+
+.btn-primary:hover {
+  background-color: #0A5A3B;
+}
+
+.btn-secondary {
+  @apply bg-[rgba(14,107,70,0.12)] text-[#0E6B46]
+         rounded-full px-4 py-2
+         transition-all duration-200 ease-out;
+}
+
+/* ------------------------------------
+   TEXT HIERARCHY HELPERS
+------------------------------------- */
+.text-section-title {
+  @apply text-base font-semibold text-[#101828];
+}
+
+.text-meta {
+  @apply text-xs text-[#98A2B3];
+}
+
+/* ------------------------------------
+   FOCUS ACCESSIBILITY
+------------------------------------- */
+:focus-visible {
+  outline: 2px solid #0E6B46;
+  outline-offset: 2px;
+}
